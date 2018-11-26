@@ -1,0 +1,27 @@
+<h1>Placa</h1>
+<div *ngIf="placa">
+<p>id: {{placa.id}}</p>
+<p>material: {{placa.material.nome}}</p>
+<p>largura: {{placa.largura}}</p>
+<p>altura: {{placa.altura}}</p>
+<p>preço: {{placa.preco}}</p>
+<p>área disponível para recorte: {{placa.area_disponivel}}</p>
+
+<h5>Recortes</h5>
+<table class="table" *ngIf="recortes">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>largura</th>
+      <th>altura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let recorte of recortes">
+      <td>{{ recorte.id }}</td>
+      <td>{{ recorte.largura }}</td>
+      <td>{{ recorte.altura }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

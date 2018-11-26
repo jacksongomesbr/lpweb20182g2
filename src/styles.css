@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #ececec;
+    padding: 30px 10px 30px 10px;
+    font-size: 10pt;
+    color: darkgray;
+}
+
+.noticia-destaque .card-title {
+    letter-spacing: -2px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+.noticia-destaque a, .noticia-destaque a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.noticia-destaque img {
+    object-fit: cover;
+    height: 300px;
+}
+
+.noticias-recentes .card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+.noticias-recentes a, .noticias-recentes a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.noticias-recentes .card .card-title {
+    letter-spacing: -1px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.noticias-recentes .card-text {
+    line-height: 18px;
+}
+
+.noticia .titulo {
+    font-weight: bold;
+}
+
+.noticia .conteudo {
+
+}
+
+.pagina {
+    margin-top: 50px;
+}
+
+.lista-noticias-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.lista-noticias-titulo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.lista-noticias-item:hover {
+    cursor: pointer;
+    background-color: #fafafa;
+}
+
+.lista-noticias-info {
+    color: gray;
+}
+
+.leitura-noticia-conteudo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    white-space: pre-line; /* collapse WS, preserve LB */
+}
+
+.leitura-noticia-rodape {
+    padding: 10px;
+    background-color: #fafafa;   
+    text-align: right;
+}
+
+#lista-pesquisar {
+    padding-bottom: 10px;
+}
+
+#lista-pesquisar input {
+    width: 100%;
+}

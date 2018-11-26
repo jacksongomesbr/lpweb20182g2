@@ -1,0 +1,24 @@
+<h1>Dashboard</h1>
+<a routerLink="/admin/recortes/cadastrar">Cadastrar recorte</a>
+<hr>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Material</th>
+      <th>Largura</th>
+      <th>Altura</th>
+      <th>Preço</th>
+      <th>Consultar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let placa of placas$ | async">
+      <td>{{ placa.material }}</td>
+      <td>{{ placa.largura }}</td>
+      <td>{{ placa.altura }}</td>
+      <td>{{ placa.preco }}</td>
+      <td><button (click)="detalhes_da_placa(placa)">Consultar</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink=""><strong>Notícias::Angular</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <ul *ngIf="!auth.estahLogado()" class="navbar-nav ml-auto">
+        <li class="nav-item right" routerLinkActive="active">
+          <a class="nav-link" routerLink="login">Login</a>
+        </li>
+      </ul>
+      <ul *ngIf="auth.estahLogado()" class="navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" routerLink="admin">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="sair()">Sair</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container pagina">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <strong>Angular::Notícias</strong>
+      </div>
+      <div class="col">
+        &copy; 2018
+      </div>
+      <div class="col">
+        <strong>Angular::Noticias</strong> é um software de notícias que serve como exercício para a disciplina de
+        Linguagem de Programação para a Web
+      </div>
+    </div>
+  </div>
+</footer>

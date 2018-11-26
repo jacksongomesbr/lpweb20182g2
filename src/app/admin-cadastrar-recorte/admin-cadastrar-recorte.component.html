@@ -1,0 +1,26 @@
+<h1>Cadastrar placa</h1>
+
+<form #cadastro="ngForm" (submit)="salvar()">
+  <div class="alert alert-danger" *ngIf="erro_validacao">
+    {{erro_validacao}}
+  </div>
+  <div class="form-group">
+    <label for="placa">Placa</label>
+    <select id="placa" name="placa" class="form-control" [(ngModel)]="placa" required>
+      <option *ngFor="let placa of placas$ | async" [value]="placa.id">
+        {{placa.id}}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="largura">Largura</label>
+    <input type="text" id="largura" name="largura" class="form-control" [(ngModel)]="largura" required>
+  </div>  
+  <div class="form-group">
+    <label for="altura">Altura</label>
+    <input type="text" id="altura" name="altura" class="form-control" [(ngModel)]="altura" required>
+  </div> 
+  <div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>  
+</form>
